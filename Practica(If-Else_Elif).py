@@ -13,5 +13,9 @@ else:
 
 #Calcular la edad
 Edad=int(input("Ingresar la edad:"))
-if Edad>=Edad and Edad<=Edad:
-  print("la mayor edad es:", Edad)
+if Edad<18:
+  print("Usted es menor de edad...")
+elif Edad>18:
+  print("Usted es mayor de edad...")
+else:
+  print("Usted aún no nace...")
