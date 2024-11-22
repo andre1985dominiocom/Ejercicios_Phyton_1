@@ -1,11 +1,23 @@
 #Imprimir título
 print("Programa para calcular la suma de los números pares y el producto del impar:")
-import math
-num1=int(input("Calcular la suma de los pares:"))
-num2=int(input("Calcular el producto de los impares:"))
-print("Mostrar el resultado de ambas variables:")
-if num2==2:
-  print("Producto del impar:")
-elif num1==1:
-  print("Suma de los pares:")
+#En las variables se utiliza False
+Suma_Pares=0
+Productos_Impares=1
+Existen_Impares=False
+N=int(input("Ingrese la cantidad de números a procesar:"))
+#Se utiliza range para definir la variable N junto con el bucle For _ in
+for _ in range(N):
+  Número=int(input("Ingrese un número:"))
+#Se utilizan condicionantes con True
+if Número%2==0:
+  Suma_Pares+=Número
+else:
+  Productos_Impares*=Número
+  Existen_Impares=True
+#Imprimir resultado
+  print("La suma de los números pares es:" , Suma_Pares)
+if Existen_Impares:
+  print("El producto de los números impares es:" , Productos_Impares)
+else:
+  print("No se ingresaron números impares:")
   

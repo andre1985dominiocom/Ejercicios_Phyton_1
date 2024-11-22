@@ -1,15 +1,19 @@
 #Imprimir título
 print("Programa para calcular el subtotal, IVA y total:")
-Producto_1=int(input("Ingresar el valor del producto 1:"))
-Producto_2=int(input("Ingresar el valor del producto 2:"))
-Producto_3=int(input("Ingresar el valor del producto 3:"))
-Producto_4=int(input("Ingresar el valor del producto 4:"))
-Producto_5=int(input("Ingresar el valor del producto 5:"))
-print("Calcular el valor de los productos:")
-IVA=int(input("Ingresar el valor del IVA:"))
-Subtotal=Producto_1+Producto_2+Producto_3+Producto_4+Producto_5
-print("Mostrar el subtotal:" , Subtotal)
-IVA=(Producto_1+Producto_2+Producto_3+Producto_4+Producto_5)*0.19
-print("Mostrar el IVA:" , IVA)
-Total=(Subtotal+IVA)
-print("Mostrar el total:" , Total)
+#Variables
+Subtotal=0
+IVA=0.19
+#Imprimir el valor de los 5 productos
+print("Calcular compra para 5 productos:")
+#Se utiliza range junto con el bucle for i in para calcular el precio de los 5 productos
+for i in range(1 , 6):
+    Precio=int(input("Ingrese el precio del producto:"))
+    Subtotal+=Precio
+#Calcular el IVA, subtotal y total
+IVA=Subtotal*IVA
+Total=Subtotal+IVA
+#Imprimir resultados
+print("Resultados de la compra:")
+print("Mostrar Subtotal:" , Subtotal)
+print("Mostrar IVA:" , IVA)
+print("Mostrar total a pagar:" , Total)

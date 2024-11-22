@@ -1,19 +1,44 @@
 #Imprimir título
 print("Programa para calcular la nota promedio de los estudiantes:")
-Estudiante_1=(input("Ingresar nombre 1:"))
-Estudiante_2=(input("Ingresar nombre 2:"))
-Estudiante_3=(input("Ingresar nombre 3:"))
-Estudiante_4=(input("Ingresar nombre 4:"))
-Estudiante_5=(input("Ingresar nombre 5:"))
-Edad_1=int(input("Ingresar edad 1:"))
-Edad_2=int(input("Ingresar edad 2:"))
-Edad_3=int(input("Ingresar edad 3:"))
-Edad_4=int(input("Ingresar edad 4:"))
-Edad_5=int(input("Ingresar edad 5:"))
-Nota_1=float(input("ingresar Nota 1:"))
-Nota_2=float(input("Ingresar Nota 2:"))
-Nota_3=float(input("Ingresar Nota 3:"))
-Nota_4=float(input("Ingresar Nota 4:"))
-Nota_5=float(input("Ingresar Nota 5:"))
-Nota_Promedio=5/5
-print("La nota promedio es:" , Nota_Promedio)
+#Ingresar estudiantes
+Estudiantes=5
+print("Ingrese los datos de 5 estudiantes del curso de computación:")
+#Se utiliza el range y el bucle for i in para solicitar los datos de los estudiantes
+for i in range(1, 6):
+    print("Número de estudiantes:")
+#Solicitar nombre
+Nombre=input("Nombre:")
+if not Nombre:
+    print("Error el nombre no puede estar vacio. Intente de nuevo:")
+#Solicitar apellido
+Apellido=input("Apellido:")
+if not Apellido:
+    print("Error el apellido no puede estar vacio intente de nuevo:")
+#Solicitar edad
+Edad=input("Edad:")
+if not Edad:
+    print("Error la edad debe ser un número entero intentelo de nuevo:")
+else:
+    Edad=int("Edad:")
+if Edad<0 or Edad>60:
+    print("Error la edad debe estar entre 0 y 60 intentelo de nuevo:")
+else:
+    Nota_Promedio=float("Nota promedio:")
+    if Nota_Promedio<0.0 or Nota_Promedio>10.0:
+        print("Error la nota promedio debe estar entre 0.0 y 10.0 intente de nuevo")
+#Solicitar los datos de los estudiantes
+Nombre="Nombre:"
+Apellido="Apellido:"
+Edad="Edad:"
+Nota_Promedio="Nota Promedio:"
+#Imprimir los datos
+if Estudiantes:
+    print("Datos de los estudiantes:")
+    for i, Estudiantes in enumerate(Estudiantes, start=1):
+        print("Estudiantes:")
+        print("Nombre:" , Nombre)
+        print("Apellido:" , Apellido)
+        print("Edad:" , Edad)
+        print("Nota Promedio:" , Nota_Promedio)
+else:
+    print("No se ingresaron datos válidos:")

@@ -1,17 +1,28 @@
 #Imprimir título
 print("Programa para calcular descuento a diferentes tipos de clientes:")
-Tipo_A=float(input("Ingresar el valor del helado A:"))
-Tipo_B=float(input("Ingresar el valor del helado B:"))
-Tipo_C=float(input("Ingresar el valor del helado C:"))
-Descuento=Tipo_A*0.10
-print ("Mostrar resultado" , Descuento)
-Descuento=Tipo_B*0.15
-print("Mostrar resultado" , Descuento)
-Descuento=Tipo_C*0.20
-print("Mostrar resultado" , Descuento)
-if Tipo_A>Tipo_B and Tipo_A>Tipo_C:
-  print("Mostrar el resultado:" , Descuento)
-elif Tipo_B>Tipo_A and Tipo_B>Tipo_C:
-  print("Mostrar el resultado:" , Descuento)
-#else:
-  #print("Mostrar resultado descuento" , Descuento)
+#Solicitar el valor del helado
+Precio=int(input("Ingresar el precio de la compra:"))
+#Se ingresa el tipo de membresía
+print("Tipos de membresía:")
+print("A: 10% descuento:")
+print("B: 15% descuento:")
+print("C: 20% descuento:")
+Tipo_Membresia=input("Ingresar el tipo de membresía (A, B, C):")
+#Calcular el descuento según tipo de membresía
+if Tipo_Membresia=="A":
+  Descuento=Precio*0.10
+elif Tipo_Membresia=="B":
+  Descuento=Precio*0.15
+elif Tipo_Membresia=="C":
+  Descuento=Precio*0.20
+else:
+  Descuento=0
+  print("Error tipo de membresía no valida no se aplica descuento:")
+#Calcular el precio después del descuento
+Total=Precio-Descuento
+#Imprmir resultados
+print("Resumen de la compra:")
+print("Precio inicial:" , Precio)
+print("Descuento:" , Descuento)
+print("Total a pagar:" , Total)
+
